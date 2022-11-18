@@ -5,10 +5,12 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  local:
-    push: false
+  # local:
+  #   push: false
+  googleCloudBuild:
+    projectId: ticketing-369015
   artifacts:
-    - image: freeflowbc/auth
+    - image: us.gcr.io/ticketing-369015/auth
       context: auth
       docker:
         dockerfile: Dockerfile
