@@ -11,6 +11,7 @@ build:
     projectId: ticketing-369015
   artifacts:
     - image: us.gcr.io/ticketing-369015/auth
+      # - image: freeflowbc/auth
       context: auth
       docker:
         dockerfile: Dockerfile
