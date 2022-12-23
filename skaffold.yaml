@@ -19,3 +19,4 @@ build:
         manual:
           - src: "./src/**/*.ts"
             dest: .
+# skaffold dev
