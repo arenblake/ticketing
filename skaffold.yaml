@@ -28,4 +28,13 @@ build:
         manual:
           - src: "**/*.js"
             dest: .
+    - image: us.gcr.io/ticketing-369015/tickets
+      # - image: freeflowbc/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "./src/**/*.ts"
+            dest: .
 # skaffold dev
