@@ -20,7 +20,7 @@ build:
           - src: "./src/**/*.ts"
             dest: .
     - image: us.gcr.io/ticketing-369015/client
-      # - image: freeflowbc/auth
+      # - image: freeflowbc/client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -40,6 +40,15 @@ build:
     - image: us.gcr.io/ticketing-369015/orders
       # - image: freeflowbc/orders
       context: orders
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "./src/**/*.ts"
+            dest: . skaffold dev
+    - image: us.gcr.io/ticketing-369015/expiration
+      # - image: freeflowbc/expiration
+      context: expiration
       docker:
         dockerfile: Dockerfile
       sync:
