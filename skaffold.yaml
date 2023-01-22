@@ -55,3 +55,12 @@ build:
         manual:
           - src: "./src/**/*.ts"
             dest: . skaffold dev
+    - image: us.gcr.io/ticketing-369015/payments
+      # - image: freeflowbc/expiration
+      context: payments
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "./src/**/*.ts"
+            dest: . skaffold dev
