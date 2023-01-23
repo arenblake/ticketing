@@ -60,7 +60,6 @@ it("returns a 400 when purchasing a cancelled order", async () => {
 
 // TODO: Add Secret management so this test works with CI/CD
 
-/*
 it("returns a 201 with valid inputs", async () => {
   const userId = new mongoose.Types.ObjectId().toHexString();
   const price = Math.floor(Math.random() * 100000);
@@ -97,4 +96,3 @@ it("returns a 201 with valid inputs", async () => {
 
   expect(payment).not.toBeNull();
 });
-*/
