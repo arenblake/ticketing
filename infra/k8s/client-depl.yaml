@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: us.gcr.io/ticketing-369015/client
+          image: freeflowbc/client
 ---
 apiVersion: v1
 kind: Service

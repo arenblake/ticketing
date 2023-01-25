@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: expiration
-          image: us.gcr.io/ticketing-369015/expiration
+          image: freeflowbc/expiration
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
@@ -26,4 +26,3 @@ spec:
               value: ticketing
             - name: REDIS_HOST
               value: expiration-redis-srv
-          # image: freeflowbc/expiration
