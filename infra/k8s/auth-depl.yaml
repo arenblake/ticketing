@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: auth
-          image: us.gcr.io/ticketing-369015/auth
+          image: freeflowbc/auth
+          # image: us.gcr.io/ticketing-369015/auth
           env:
             - name: MONGO_URI
               value: "mongodb://auth-mongo-srv:27017/auth"
@@ -23,7 +24,6 @@ spec:
                 secretKeyRef:
                   name: jwt-secret
                   key: JWT_KEY
-          # image: freeflowbc/auth
 ---
 apiVersion: v1
 kind: Service

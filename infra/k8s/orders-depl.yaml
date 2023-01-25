@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: orders
-          image: us.gcr.io/ticketing-369015/orders
+          image: freeflowbc/orders
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
@@ -31,7 +31,6 @@ spec:
                 secretKeyRef:
                   name: jwt-secret
                   key: JWT_KEY
-          # image: freeflowbc/orders
 ---
 apiVersion: v1
 kind: Service
