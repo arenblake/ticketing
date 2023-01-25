@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const LandingPage = ({ currentUser, tickets }) => {
+  console.log("Index page....");
   const ticketList = tickets.map((ticket) => {
     return (
       <tr key={ticket.id}>
